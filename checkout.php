@@ -36,7 +36,7 @@ $total = 0;
                             <textarea id="" cols="30" rows="3" name="delivery_address" class="form-control" style="resize:none"><?php echo $_settings->userdata('default_delivery_address') ?></textarea>
                         </div>
                         <div class="col">
-                            <span><h4><b>Total:</b> <?php echo number_format($total) ?></h4></span>
+                             <span><h4><b>Total:</b> &#36; <?php echo number_format($total) ?></h4></span>
                         </div>
                         <hr>
                         <div class="col my-3">
@@ -58,7 +58,8 @@ paypal.Button.render({
  
         //app's client id's
 	client: {
-        sandbox:    'AdDNu0ZwC3bqzdjiiQlmQ4BRJsOarwyMVD_L4YQPrQm4ASuBg4bV5ZoH-uveg8K_l9JLCmipuiKt4fxn',
+        //sandbox:    'AeA7tVHrUrfLE7igqhGlFLyQvjEB_Szzt58r_kVu5_bg_88CDtHjOtupYm3U62k2SeetvI2U-6VEg5ah',
+		sandbox:    'AdDNu0ZwC3bqzdjiiQlmQ4BRJsOarwyMVD_L4YQPrQm4ASuBg4bV5ZoH-uveg8K_l9JLCmipuiKt4fxn',
         //production: 'AaBHKJFEej4V6yaArjzSx9cuf-UYesQYKqynQVCdBlKuZKawDDzFyuQdidPOBSGEhWaNQnnvfzuFB9SM'
     },
  
@@ -77,7 +78,7 @@ paypal.Button.render({
                     	//total purchase
                         amount: { 
                         	total: '<?php echo $total; ?>', 
-                        	currency: 'PHP' 
+                        	currency: 'USD' 
                         }
                     }
                 ]
