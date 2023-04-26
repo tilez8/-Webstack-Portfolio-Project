@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 26, 2023 at 04:15 AM
+-- Generation Time: Apr 26, 2023 at 11:19 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.1.24
 
@@ -44,7 +44,6 @@ CREATE TABLE `cart` (
 INSERT INTO `cart` (`id`, `client_id`, `inventory_id`, `price`, `quantity`, `date_created`) VALUES
 (4, 1, 1, 2500, 1, '2021-07-16 13:48:00'),
 (8, 2, 3, 250, 2, '2023-04-25 16:50:19'),
-(9, 2, 6, 300, 1, '2023-04-25 19:01:04'),
 (10, 2, 10, 285, 1, '2023-04-25 19:04:58');
 
 -- --------------------------------------------------------
@@ -117,15 +116,15 @@ CREATE TABLE `inventory` (
 --
 
 INSERT INTO `inventory` (`id`, `product_id`, `quantity`, `price`, `date_created`, `date_updated`) VALUES
-(1, 1, 50, 250, '2021-07-16 10:02:39', '2023-04-17 17:51:48'),
-(2, 2, 20, 350, '2021-07-16 10:09:08', '2023-04-17 17:51:44'),
-(3, 3, 10, 250, '2021-07-16 12:05:54', '2023-04-17 17:51:38'),
-(4, 4, 50, 199, '2021-07-16 13:12:10', '2023-04-17 17:51:31'),
 (6, 6, 38, 300, '2023-04-17 18:09:22', NULL),
 (7, 7, 50, 450, '2023-04-17 18:18:47', NULL),
 (8, 8, 50, 350, '2023-04-17 18:29:07', NULL),
 (9, 9, 25, 280, '2023-04-17 18:39:31', NULL),
-(10, 10, 26, 285, '2023-04-17 18:48:08', NULL);
+(10, 10, 26, 285, '2023-04-17 18:48:08', NULL),
+(11, 11, 28, 200, '2023-04-25 22:11:06', NULL),
+(12, 12, 25, 210, '2023-04-25 22:13:01', NULL),
+(13, 13, 30, 160, '2023-04-25 22:17:37', NULL),
+(14, 14, 15, 145, '2023-04-25 22:21:38', NULL);
 
 -- --------------------------------------------------------
 
@@ -207,15 +206,15 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `category_id`, `sub_category_id`, `title`, `author`, `description`, `status`, `date_created`) VALUES
-(1, 1, 1, 'CakePHP: From Novice to professional', 'David Golding', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 1, '2021-07-16 09:43:11'),
-(2, 1, 1, 'Murach\\\'s PHP and MySQL', 'Joel Murach, Ray Harris', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 1, '2021-07-16 10:08:53'),
-(3, 1, 2, 'English Grammar in Use', 'Raymond Murphy, Surai Pongtongcharoen', '&lt;p&gt;&lt;span style=\\&quot;text-align: justify;\\&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non ultrices tortor. Sed at ligula non lectus tempor bibendum a nec ante. Maecenas iaculis vitae nisi eu dictum. Duis sit amet enim arcu. Etiam blandit vulputate magna, non lobortis velit pharetra vel. Morbi sollicitudin lorem sed augue suscipit, eu commodo tortor vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent eleifend interdum est, at gravida erat molestie in. Vestibulum et consectetur dui, ac luctus arcu. Curabitur et viverra elit. Cras ac eleifend ipsum, ac suscipit leo. Vivamus porttitor ac risus eu ultricies. Morbi malesuada mi vel luctus sagittis. Ut vestibulum porttitor est, id rutrum libero. Mauris at lacus vehicula, aliquam purus quis, pharetra lorem.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 1, '2021-07-16 12:03:08'),
-(4, 1, 2, 'English Grammar for Dummies', 'Geraldine Woods', '&lt;p style=\\&quot;margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px;\\&quot;&gt;Ut et urna sapien. Nulla lacinia sagittis felis id cursus. Etiam eget lacus quis enim aliquet dignissim. Nulla vel elit ultrices, venenatis quam sed, rutrum magna. Pellentesque ultricies non lorem hendrerit vestibulum. Maecenas lacinia pharetra nisi, at pharetra nunc placerat nec. Maecenas luctus dolor in leo malesuada, vel aliquet metus sollicitudin. Curabitur sed pellentesque sem, in tincidunt mi. Aliquam sodales aliquam felis, eget tristique felis dictum at. Proin leo nisi, malesuada vel ex eu, dictum pellentesque mauris. Quisque sit amet varius augue.&lt;/p&gt;&lt;p style=\\&quot;margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px;\\&quot;&gt;Sed quis imperdiet est. Donec lobortis tortor id neque tempus, vel faucibus lorem mollis. Fusce ut sollicitudin risus. Aliquam iaculis tristique nunc vel feugiat. Sed quis nulla non dui ornare porttitor eu vitae nisi. Curabitur at quam ut libero convallis mattis vel eget mauris. Vivamus vitae lectus ligula. Nulla facilisi. Vivamus tristique maximus nulla, vel mollis felis blandit posuere. Curabitur mi risus, rutrum non magna at, molestie gravida magna. Aenean neque sapien, volutpat a ullamcorper nec, iaculis quis est.&lt;/p&gt;', 1, '2021-07-16 13:11:17'),
 (6, 2, 3, 'Mrs Dalloway', 'Virginia Woolf', 'Mrs. Dalloway is a novel by Virginia Woolf published on 14 May 1925. It details a day in the life of Clarissa Dalloway, a fictional upper-class woman in post-First World War England. It is one of Woolf\\\'s best-known novels. The working title of Mrs. Dalloway was The Hours', 1, '2023-04-17 18:08:46'),
 (7, 2, 4, 'Start-up Nation', 'Saul Singer , Dan Senor', '&lt;p&gt;Start-Up Nation addresses the trillion dollar question: How is it that Israel -- a country of 7.1 million, only 60 years old, surrounded by enemies, in a constant state of war since its founding, with no natural resources-- produces more start-up companies than large, peaceful, and stable nations like Japan, China, India, Korea, Canada and the UK?&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;With the savvy of foreign policy insiders, Senor and Singer examine the lessons of the country\\\'s adversity-driven culture, which flattens hierarchy and elevates informality-- all backed up by government policies focused on innovation. In a world where economies as diverse as Ireland, Singapore and Dubai have tried to re-create the \\&quot;Israel effect\\&quot;, there are entrepreneurial lessons well worth noting. As America reboots its own economy and can-do spirit, there\\\'s never been a better time to look at this remarkable and resilient nation for some impressive, surprising clues.&lt;/p&gt;', 1, '2023-04-17 18:18:19'),
 (8, 3, 5, 'The Foxglove King', 'HANNAH WHITTEN', '&lt;p&gt;In this romantic new fantasy series from author Hannah Whitten, a young woman\\\'s secret power to raise the dead plunges her into the dangerous and glamorous world of the Sainted King\\\'s royal court.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;When Lore was thirteen, she escaped a cult in the catacombs beneath the city of Dellaire. And in the ten years since, she&rsquo;s lived by one rule: don&rsquo;t let them find you. Easier said than done, when her death magic ties her to the city.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Mortem, the magic born from death, is a high-priced and illicit commodity in Dellaire, and Lore&rsquo;s job running poisons keeps her in food, shelter, and relative security. But when a run goes wrong and Lore&rsquo;s power is revealed, she&rsquo;s taken by the Presque Mort, a group of warrior-monks sanctioned to use Mortem working for the Sainted King. Lore fully expects a pyre, but King August has a different plan. Entire villages on the outskirts of the country have been dying overnight, seemingly at random. Lore can either use her magic to find out what&rsquo;s happening and who in the King&rsquo;s court is responsible, or die.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Lore is thrust into the Sainted King&rsquo;s glittering court, where no one can be believed and even fewer can be trusted. Guarded by Gabriel, a duke-turned-monk, and continually running up against Bastian, August&rsquo;s ne&rsquo;er-do-well heir, Lore tangles in politics, religion, and forbidden romance as she attempts to navigate a debauched and opulent society.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;But the life she left behind in the catacombs is catching up with her. And even as Lore makes her way through the Sainted court above, they might be drawing closer than she thinks.&lt;/p&gt;', 1, '2023-04-17 18:28:31'),
 (9, 3, 6, 'The White Road', 'Sarah Lotz', '&lt;p&gt;If you missed this terrific book when it was first published, this is the perfect opportunity to dive into an action-driven thriller with a twist of Stephen King. Simon is fueled by adrenaline but has little purpose in his life. His business partner pushes him to explore a cave system hoping to document the remains of three lost spelunkers, so Simon hires a surly guide and climbs down into the claustrophobic caves, where they soon find themselves trapped by rising water. Simon makes it out and goes on to make an attempt at climbing Everest to document the bodies of climbers who didn&rsquo;t make it, but he&rsquo;s haunted, either by a real, malevolent spirit, or a creeping paranoia. As the mountain pushes him to the limit, the question of what&rsquo;s happening &mdash; and how he&rsquo;ll survive &mdash; is the sort of white-knuckle adventure you&rsquo;ll love.&lt;br&gt;&lt;/p&gt;', 1, '2023-04-17 18:39:08'),
-(10, 4, 7, 'Steve Jobs', 'Walter Isaacson', '&lt;p&gt;Walter Isaacson&rsquo;s &ldquo;enthralling&rdquo; (The New Yorker) worldwide bestselling biography of Apple cofounder Steve Jobs.&lt;/p&gt;&lt;p&gt;&lt;span style=\\&quot;font-size: 1rem;\\&quot;&gt;Based on more than forty interviews with Steve Jobs conducted over two years&mdash;as well as interviews with more than 100 family members, friends, adversaries, competitors, and colleagues&mdash;Walter Isaacson has written a riveting story of the roller-coaster life and searingly intense personality of a creative entrepreneur whose passion for perfection and ferocious drive revolutionized six industries: personal computers, animated movies, music, phones, tablet computing, and digital publishing.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=\\&quot;font-size: 1rem;\\&quot;&gt;At a time when America is seeking ways to sustain its innovative edge, Jobs stands as the ultimate icon of inventiveness and applied imagination. He knew that the best way to create value in 21st century was to connect creativity with technology. He built a company where leaps of the imagination were combined with remarkable feats of engineering.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=\\&quot;font-size: 1rem;\\&quot;&gt;Although Jobs cooperated with the author, he asked for no control over what was written. He put nothing off-limits. He encouraged the people he knew to speak honestly. And Jobs speaks candidly, sometimes brutally so, about the people he worked with and competed against. His friends, foes, and colleagues provide an unvarnished view of the passions, perfectionism, obsessions, artistry, devilry, and compulsion for control that shaped his approach to business and the innovative products that resulted.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=\\&quot;font-size: 1rem;\\&quot;&gt;Driven by demons, Jobs could drive those around him to fury and despair. But his personality and products were interrelated, just as Apple&rsquo;s hardware and software tended to be, as if part of an integrated system. His tale is instructive and cautionary, filled with lessons about innovation, character, leadership, and values.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=\\&quot;font-size: 1rem;\\&quot;&gt;Steve Jobs is the inspiration for the movie of the same name starring Michael Fassbender, Kate Winslet, Seth Rogen, and Jeff Daniels, directed by Danny Boyle with a screenplay by Aaron Sorkin.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 1, '2023-04-17 18:47:31');
+(10, 4, 7, 'Steve Jobs', 'Walter Isaacson', '&lt;p&gt;Walter Isaacson&rsquo;s &ldquo;enthralling&rdquo; (The New Yorker) worldwide bestselling biography of Apple cofounder Steve Jobs.&lt;/p&gt;&lt;p&gt;&lt;span style=\\&quot;font-size: 1rem;\\&quot;&gt;Based on more than forty interviews with Steve Jobs conducted over two years&mdash;as well as interviews with more than 100 family members, friends, adversaries, competitors, and colleagues&mdash;Walter Isaacson has written a riveting story of the roller-coaster life and searingly intense personality of a creative entrepreneur whose passion for perfection and ferocious drive revolutionized six industries: personal computers, animated movies, music, phones, tablet computing, and digital publishing.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=\\&quot;font-size: 1rem;\\&quot;&gt;At a time when America is seeking ways to sustain its innovative edge, Jobs stands as the ultimate icon of inventiveness and applied imagination. He knew that the best way to create value in 21st century was to connect creativity with technology. He built a company where leaps of the imagination were combined with remarkable feats of engineering.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=\\&quot;font-size: 1rem;\\&quot;&gt;Although Jobs cooperated with the author, he asked for no control over what was written. He put nothing off-limits. He encouraged the people he knew to speak honestly. And Jobs speaks candidly, sometimes brutally so, about the people he worked with and competed against. His friends, foes, and colleagues provide an unvarnished view of the passions, perfectionism, obsessions, artistry, devilry, and compulsion for control that shaped his approach to business and the innovative products that resulted.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=\\&quot;font-size: 1rem;\\&quot;&gt;Driven by demons, Jobs could drive those around him to fury and despair. But his personality and products were interrelated, just as Apple&rsquo;s hardware and software tended to be, as if part of an integrated system. His tale is instructive and cautionary, filled with lessons about innovation, character, leadership, and values.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=\\&quot;font-size: 1rem;\\&quot;&gt;Steve Jobs is the inspiration for the movie of the same name starring Michael Fassbender, Kate Winslet, Seth Rogen, and Jeff Daniels, directed by Danny Boyle with a screenplay by Aaron Sorkin.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 1, '2023-04-17 18:47:31'),
+(11, 1, 1, 'CakePHP: From novice to professional', 'David Golding', '&lt;p&gt;CakePHP: From novice to professional&lt;br&gt;&lt;/p&gt;', 1, '2023-04-25 22:10:34'),
+(12, 1, 1, 'Murach\\\'s PHP and MYSQL', 'Joel Murach, Ray Harris', '&lt;p&gt;Murach\\\'s PHP and MYSQL&lt;br&gt;&lt;/p&gt;', 1, '2023-04-25 22:12:38'),
+(13, 1, 2, 'English Grammar for Dummies', 'Geraldine Woods', '&lt;p&gt;English Grammar for Dummies&lt;br&gt;&lt;/p&gt;', 1, '2023-04-25 22:16:46'),
+(14, 1, 2, 'English Grammar in use', 'Raymond Murphy, Surai Pontongcharoen', '&lt;p&gt;English Grammar in use&lt;br&gt;&lt;/p&gt;', 1, '2023-04-25 22:20:58');
 
 -- --------------------------------------------------------
 
@@ -235,7 +234,6 @@ CREATE TABLE `sales` (
 --
 
 INSERT INTO `sales` (`id`, `order_id`, `total_amount`, `date_created`) VALUES
-(1, 3, 8500, '2021-07-16 11:18:12'),
 (3, 5, 199, '2023-04-18 15:03:56'),
 (4, 6, 285, '2023-04-18 15:05:24'),
 (5, 7, 2070, '2023-04-25 13:49:35'),
@@ -419,7 +417,7 @@ ALTER TABLE `clients`
 -- AUTO_INCREMENT for table `inventory`
 --
 ALTER TABLE `inventory`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -437,7 +435,7 @@ ALTER TABLE `order_list`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `sales`
